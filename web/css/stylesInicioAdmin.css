@@ -1,0 +1,651 @@
+/*
+    Desarrollo Movil
+*/
+
+/*
+    Reiniciando valores navegador por Defecto
+*/
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Modo Claro */
+body{
+    background: #f1f1f1;
+    font-family: 'Ubuntu', sans-serif;
+    transition: .20s ease all;
+}
+
+/* Cambiar los Colores del Body para el modo oscuro*/
+
+body.dark{
+    background: #000;
+    font-family: 'Ubuntu', sans-serif;
+    transition: .20s ease all;
+}
+
+
+/* Menu Enlaces*/
+
+body.dark .header nav div ul li a{
+    color: white;
+}
+
+body.dark .header nav div ul li a:hover{
+    font-size: 1.3em;
+    color: #00214D;
+}
+
+header{
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Imagen centrada */
+.nav-logo{
+    width: 40%;
+    display: block;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+/* Menu Hamburguesa para Peliculas modo oscuro*/
+
+
+body.dark .nav-menu_peliculas {
+  width: 100%;
+}
+
+.nav-menu_peliculas label {
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  border: 2px solid #f1f1f1;
+  color: #fff;
+  text-align: center;
+  background: #B4133C;
+}
+
+.nav-menu_peliculas label:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.nav-menu_peliculas label::before {
+  content: "";
+  width: 70%;
+  height: 3px;
+  margin: 10px auto;
+  display: block;
+  background: #f1f1f1;
+  box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
+}
+
+.nav-menu_peliculas input[type="checkbox"]:checked ~ ul {
+  max-height: 500px;
+  transition: all 1s ease;
+}
+
+.nav-menu_peliculas input[type="checkbox"] {
+  display: none;
+}
+
+.nav-menu_peliculas ul {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 5px;
+  max-height: 0px;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.nav-menu_peliculas ul li {
+  height: 30px;
+  text-align: center;
+  margin: auto;
+  transition: all 1s ease;
+}
+
+.nav-menu_peliculas ul a {
+  color: white;
+  font-weight: bold;
+}
+/* En modo claro el menu de peliculas tiene letra negra*/
+
+body .nav-menu_peliculas ul a {
+  color: black;
+}
+
+/* En modo claro el menu de peliculas tiene letra negra*/
+
+body .nav-menu_peliculas ul a {
+  color: black;
+}
+
+/* Modo oscuro Menu navegacion peliculas*/
+
+body.dark .nav-menu_peliculas ul a {
+  color: white;
+}
+
+.nav-menu_peliculas ul li:hover {
+  cursor: pointer;
+  background-color: #B4133C;
+  padding: 5px;
+  border-bottom: 1px solid gray;
+}
+
+
+/* Centrado y menu navegacion Para el usuario*/
+.cont-nav > div{
+    width: 98%;
+    margin: 0 auto;
+}
+
+.cont-nav > div ul.nav-menu{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Foto del perfil, o avatar del usuario*/
+
+.cont-nav .menu_item .perfil-user{
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.perfil-user .link_fotoP{
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 50%;
+}
+
+.perfil-user .link_fotoP .fotoP{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Cerrar sesion*/
+
+.cont-nav .nav-menu .menu_item form input[type="submit"]{
+    background: #00214D;
+    color: white;
+    border-radius: 7px;
+    cursor:pointer;
+    font-size: 1.2em;
+    padding: 2px;
+    border: none;
+}
+
+/* Modo oscuro*/
+
+.switch{
+    background: #343D5B;
+    border-radius: 1000px;
+    border:none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3S ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+}
+
+
+.nav-menu .switch.active{
+    background: orange;
+    color: #000;
+}
+
+.nav-menu .switch.active::after{
+    right: 0;
+    left: unset;
+}
+
+.switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+/* tamaño, color, etc de la fuente menu navegacion*/
+.header nav div {
+    margin-top: 20px;
+}
+
+.header nav div ul li a{
+    font-size: 1.2em;
+    color: black;
+}
+
+.header nav div ul li a:hover{
+    font-size: 1.3em;
+    color: #00214D;
+}
+
+.header nav div ul li a.red:hover{
+    background: #B4133C;
+    border-radius: 8px;
+    border: none;
+    padding: 7px;
+}
+
+.header nav div ul li a.activo{
+    background: #34B3E7;
+    border-radius: 8px;
+    border: none;
+    padding: 7px;
+}
+
+
+/* Buscador Peliculas del Nav*/
+
+.cont-nav .buscador{
+    display: flex;
+    justify-content: center;
+    
+}
+
+body.dark .cont-nav .buscador input[type=text]{
+    display: block;
+    width: 50%;
+    font-size: 1em;
+    background: #f1f1f1;
+    padding: 4px 2px 5px 3px;
+    border-radius: 2px;
+    border:none;
+    color: #000;
+}
+
+body .cont-nav .buscador input[type=text]{
+    display: block;
+    width: 50%;
+    font-size: 1em;
+    background: #DBDBDD;
+    padding: 4px 2px 5px 3px;
+    border-radius: 2px;
+    border:none;
+    color: #000;
+}
+
+/*
+    Peliculas
+*/
+
+/* Seccion de contenido principal modo claro seccion tarjetas peliculas*/
+
+.cont-principal{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-principal .cont-peliculas{
+    margin: 20px auto;
+}
+
+.cont-principal .cont-peliculas .tarjetas{
+    position: relative;
+    width: 220px;
+    height: 320px;
+    box-shadow: 0 4px 8px 0 RGBA(0,33,77,0.2), 0 6px 20px 0 RGBA(0,33,77,0.19);
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.cont-principal .cont-peliculas .tarjetas .aparecer {
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    color: white;
+    z-index: -10;
+    color: #000;
+}
+
+/* Modo Oscuro tarjetas */
+
+body.dark .cont-principal .cont-peliculas .tarjetas{
+    position: relative;
+    height: 320px;
+    box-shadow: 0 4px 8px 0 RGBA(241,241,241,0.2), 0 6px 20px 0 RGBA(0,33,77,0.19);
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+body.dark .cont-principal .cont-peliculas .tarjetas .aparecer {
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    color: white;
+    z-index: -10;
+    color: #fff;
+}
+
+.img {
+  width: 220px;
+  height: 320px;
+}
+
+.img:hover {
+  opacity: 0.2;
+}
+
+
+/* Seccion de Subir PELICULAS*/
+.cont-principal .cont-uploapPelis{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Color letra blanca fondo negro*/
+body.dark{
+    color: #f1f1f1;
+}
+
+.uploadPelis form > div{
+    margin-bottom: 10px;
+}
+
+.cont-form{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid #34B3E7;
+    border-radius: 5%;
+}
+
+label{
+    font-size: 1.1em;;
+}
+
+
+.form div > label{
+    margin: 15px 0;
+    display: block;
+}
+
+input[type="text"]{
+    padding: 7px;
+    border:1px;
+    border-bottom: 1px solid #00214D ;
+    /*quitar el cosito de seleccion de caja*/
+    outline: none;  
+    background: #f1f1f1;
+    color: #000;
+    font-size: 1.1em;
+}
+
+body.dark input[type="text"]{
+    padding: 7px;
+    border:1px;
+    border-bottom: 1px solid #00214D ;
+    /*quitar el cosito de seleccion de caja*/
+    outline: none;  
+    background: #000;
+    color: #f1f1f1;
+    font-size: 1.1em;
+}
+
+.form_uploadPelis .uploadD .text-desc{
+    padding: 2px;
+    margin-top: 20px;
+    width: 90%;
+    height: 80px;
+    font-size: 1.3em;
+    background: #f1f1f1;
+}
+
+.form_uploadPelis .uploadF input{
+    background: #34B3E7;
+    padding: 4px;
+    cursor:pointer;
+    border-radius: 5px;
+    
+}
+
+.boton{
+    background: #4BC75A;
+    padding: 4px;
+    cursor:pointer;
+    font-size: 1.1em;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+
+/* Version Movile horizontal- tablet vertical */
+
+@media only screen and (min-width: 600px) {
+    /* Imagen de logo */
+    .nav-logo{
+        width: 35%;
+    }
+    
+}
+
+/* Version Tablet Horizontal */
+
+@media only screen and (min-width: 768px) {
+    /* Imagen de logo */
+    .nav-logo{
+        width: 20%;
+    }
+    
+    /* Menu navegacion*/
+    .cont-nav > div ul{
+        justify-content: center;
+    }
+    
+    .cont-nav > div ul .menu_item{
+        margin-right: 10%;
+    }
+    
+    body.dark .cont-nav .buscador input[type=text],
+    body .cont-nav .buscador input[type=text]{
+        width: 30%;
+    }
+    
+    /* CONTENIDO PRINCIPAl*/
+    
+    /*Peliculas*/
+    
+    .cont-principal .cont-peliculas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap : 40px;
+    }
+    
+    /*Publicidad*/
+
+    .cont-principal .cont-uploapPelis{
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+/* Version laptos y desktops */
+
+@media only screen and (min-width: 992px) {
+    /* Imagen de logo */
+    .nav-logo{
+        width: 15%;
+    }
+    
+    
+    /* transformacion del menu hamgurguesa de peliculas a Escritorio*/
+    
+    .nav-menu_peliculas label,
+    .nav-menu_peliculas #desplegar {
+        display: none;
+    }
+
+    .nav-menu_peliculas ul {
+       flex-direction: row;
+    }
+
+    .nav-menu_peliculas ul a {
+        margin-top: 10px;
+        margin-right: 22px;
+    }
+
+    .nav-menu_peliculas ul a:last-of-type {
+        margin-right: 30px;
+    }
+
+    .nav-menu_peliculas ul a li {
+        font-size: 1.2rem;
+    }
+
+    body .nav-menu_peliculas ul li{
+        transition: none;
+        background-color: #B4133C;
+        padding: 2px;
+        border-radius: 5px;
+        border: none;
+    }
+
+      /* Menu modo oscuro*/
+    body.dark .nav-menu_peliculas ul li {
+        transition: none;
+        background-color: #B4133C;
+        padding: 2px;
+        border-radius: 5px;
+        border: none;
+    }
+       
+    
+    /* Menu Modo light y dark Con hover para escritorio*/
+    
+    body .nav-menu_peliculas ul li:hover{
+        cursor: pointer;
+        background-color: #00214D;
+        padding: 2px 4px;
+        opacity: 0.8;
+        border-bottom: none;
+        color: #f1f1f1;
+    }
+
+    body.dark .nav-menu_peliculas ul li:hover{
+        cursor: pointer;
+        background-color: #00214D;
+        padding: 2px 4px;
+        opacity: 0.8;
+        border-bottom: none;
+        color: #f1f1f1;
+    }
+    
+    /* Seccion de contenido principal*/
+    
+    /*PELICULAS*/
+    
+    .cont-principal .cont-peliculas{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap : 40px;
+    }
+    
+    /* Formulario Subir peliculas nuevas*/
+    .uploadPelis{
+        margin-top: 28px;
+        padding: 10px;
+    }
+    
+    .form_uploadPelis{
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    /* Seccion de comentarios*/
+
+    .cont-principal .cont-comentarios .text-comment{
+        height: 80px;
+    }
+
+    
+}
+
+/* Version Pc de escritorio y pantallas grandes */
+
+@media only screen and (min-width: 1200px) {
+    /* Imagen de logo */
+    .nav-logo{
+        width: 10%;
+    }
+    
+    /* Seccion de contenido principal*/
+    
+    .cont-principal,
+    body.dark .cont-principal{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    /*PELICULAS*/
+    
+    .cont-principal .cont-peliculas{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap : 40px;
+    }
+
+    /*Seccion de subir peliculas pantalla grande*/
+    
+    .cont-principal .cont-uploapPelis{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Version Pantallas Grandes mas de 1500px */
+
+@media only screen and (min-width: 1472px) {
+    
+      /*PELICULAS*/
+    
+    .cont-principal .cont-peliculas{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap : 40px;
+    }
+
+}

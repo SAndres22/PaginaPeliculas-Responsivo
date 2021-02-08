@@ -1,0 +1,263 @@
+/*
+    Desarrollo Movil
+*/
+
+/*
+    Reiniciando valores navegador por Defecto
+*/
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Modo Claro */
+body{
+    background: #f1f1f1;
+    font-family: 'Ubuntu', sans-serif;
+    transition: .20s ease all;
+}
+
+/* Cambiar los Colores del Body para el modo oscuro*/
+
+body.dark{
+    background: #000;
+    font-family: 'Ubuntu', sans-serif;
+    transition: .20s ease all;
+}
+
+/* Modo oscuro*/
+
+.switch{
+    background: #343D5B;
+    border-radius: 1000px;
+    border:none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    visibility: hidden; 
+}
+
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3S ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+}
+
+
+.nav-menu .switch.active{
+    background: orange;
+    color: #000;
+}
+
+.nav-menu .switch.active::after{
+    right: 0;
+    left: unset;
+}
+
+.switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+.header{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.header .cont-title-switch{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 50px;
+    width: 100%;
+}
+
+.header h2{
+    margin-bottom: 20px;
+}
+
+body.dark header h2{
+    margin-bottom: 20px;
+    color: white;
+}
+
+/*Perfil del usuario Avatar o foto*/
+
+
+.header .perfil-user{
+    width: 200px;
+    height: 200px;
+    background-image: white;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.header .perfil-user .foto_avatar{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.perfil-user .foto_avatar .fotoP{
+    width: 200px;
+    height: 200px;
+    display: block;
+    border-radius: 50%;
+    border: none;
+}
+
+.perfil-user .foto_avatar .perfil-user_form{
+    position: absolute;
+    top: 140px;
+    right: 20px;
+}
+
+.perfil-user_form label a i{
+    font-size: 1.8em;
+    color: #fff;
+    padding: 6px;
+    border-radius: 50%;
+    border: 1px solid #00214D;
+    background: rgba(171, 178, 185, 0.6);
+    cursor: pointer;
+}
+
+.perfil-user .btn-I{
+    margin: 20px 0; 
+}
+
+.btn-inicio{
+   border: 1px solid red; 
+   display: block; 
+   text-align: center;
+   margin: 20px 0; 
+   background: #4BC75A;
+   padding: 5px; 
+   color: #f1f1f1;
+   font-size: 1.1em; 
+   font-weight: bold;
+   cursor: pointer; 
+   border: none;
+}
+
+/* Actualizar demas informacion*/
+
+.datosPersonales{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.datosPersonales .cont-nombres,
+.datosPersonales .cont-clave{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-top: 31px;
+}
+
+.datosPersonales .cont-nombres >div,
+.datosPersonales .cont-clave > div{
+    margin-bottom: 5px;
+}
+
+.datosPersonales .cont-nombres > div label,
+.datosPersonales .cont-clave > div label{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+/*Letra blannca en modo oscuro*/
+
+body.dark{
+    color: #fff;
+}
+
+
+.datosPersonales .cont-nombres > div span{
+    font-size: 1.3em;
+
+}
+
+.datosPersonales .editar{
+    font-size: 1.2em;
+    color: #00214D;
+
+}
+
+.datosPersonales .editar i{
+    color: #4BC75A;
+}
+
+
+.myFrame{
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+.cont-iframe{
+    width: 90%;
+    margin: 20px auto;
+    height: 400px;
+}
+
+
+/* Version Movile horizontal- tablet vertical */
+
+@media only screen and (min-width: 600px) {
+
+
+}
+
+/* Version Tablet Horizontal */
+
+@media only screen and (min-width: 768px) {
+
+
+}
+
+/* Version laptos y desktops */
+
+@media only screen and (min-width: 992px) {
+
+    /* Para que se hagan 3 secciones*/
+    
+    .contP{
+        display: flex;
+    }
+    
+    .btn-inicio{
+        width: 50%;
+        margin: 20px auto;
+    }
+
+
+
+}
+
+/* Version Pc de escritorio y pantallas grandes */
+
+@media only screen and (min-width: 1200px) {
+
+}

@@ -1,0 +1,206 @@
+/*
+    Desarrollo Movil
+*/
+
+/*
+    Reiniciando valores navegador por Defecto
+*/
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Modo Claro */
+body{
+    background: #f1f1f1;
+    font-family: 'Ubuntu', sans-serif;
+    transition: .20s ease all;
+}
+
+/* Cambiar los Colores del Body para el modo oscuro*/
+
+body.dark{
+    background: #000;
+    font-family: 'Ubuntu', sans-serif;
+    transition: .20s ease all;
+}
+
+/* Modo oscuro*/
+
+.switch{
+    background: #343D5B;
+    border-radius: 1000px;
+    border:none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    visibility: hidden;
+}
+
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3S ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+}
+
+
+.nav-menu .switch.active{
+    background: orange;
+    color: #000;
+}
+
+.nav-menu .switch.active::after{
+    right: 0;
+    left: unset;
+}
+
+.switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+.gran-cont{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.cont2{
+    margin:40px 0;
+}
+
+/* Color letra blanca fondo negro*/
+body.dark{
+    color: #f1f1f1;
+}
+
+/* Primera seccion*/
+
+label{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.form_foto .uploadF input{
+    background: #34B3E7;
+    padding: 4px;
+    cursor:pointer;
+    border-radius: 5px;
+    
+}
+
+.boton{
+    background: #4BC75A;
+    padding: 4px;
+    cursor:pointer;
+    font-size: 1.1em;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.botonC{
+    background: #B4133C;
+    padding: 4px;
+    cursor:pointer;
+    font-size: 1.1em;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Segunda seccion*/
+
+.form div > label{
+    margin: 15px 0;
+    display: block;
+}
+
+.form input[type="text"]{
+    padding: 7px;
+    border:1px;
+    border-bottom: 1px solid #00214D ;
+    /*quitar el cosito de seleccion de caja*/
+    outline: none;  
+    background: #f1f1f1;
+    color: #000;
+    font-size: 1.1em;
+    
+}
+
+body.dark .form input[type="text"]{
+    padding: 7px;
+    border:1px;
+    border-bottom: 1px solid #00214D ;
+    /*quitar el cosito de seleccion de caja*/
+    outline: none;  
+    background: #000;
+    color: #f1f1f1;
+}
+
+/* Version Movile horizontal- tablet vertical */
+
+@media only screen and (min-width: 600px) {
+
+
+}
+
+/* Version Tablet Horizontal */
+
+@media only screen and (min-width: 768px) {
+  
+
+
+}
+
+/* Version laptos y desktops */
+
+@media only screen and (min-width: 992px) {
+    
+    .gran-cont{
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    .cont{
+        margin-right: 30px;
+    }
+    .form{
+        display: flex;
+    }
+    
+    .form div > label{
+        margin: 0;
+    }
+    
+    .form-cont{
+        display: flex; 
+    }
+
+}
+
+/* Version Pc de escritorio y pantallas grandes */
+
+@media only screen and (min-width: 1200px) {
+
+}
